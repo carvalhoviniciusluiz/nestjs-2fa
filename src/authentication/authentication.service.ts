@@ -26,11 +26,14 @@ export class AuthenticationService {
   async login(userWithoutPsw: Partial<User>) {
     const payload = {
       email: userWithoutPsw.email,
+      isTwoFactorAuthenticationEnabled: userWithoutPsw.isTwoFactorAuthenticationEnabled
     };
 
     return {
       email: payload.email,
+      twoFactorAuthenticationRequired: payload.isTwoFactorAuthenticationEnabled,
       access_token: this.jwtService.sign(payload),
+
     };
   }
 
@@ -69,7 +72,6 @@ export class AuthenticationService {
   }
 
   generateTwoFactorAuthenticationToken(user: User) {
-    // console.log(authenticator.generateSecret());
     return authenticator.generate(user.twoFactorAuthenticationSecret);
   }
 

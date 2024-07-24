@@ -83,6 +83,11 @@ create new token
 }
 ```
 
+### **protected/endpoint**
+
+- `#GET /protected/endpoint`
+```
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)

@@ -9,15 +9,15 @@ export class UsersService {
       email: 'john@test.com',
       username: 'john',
       password: 'changeme',
-      twoFactorAuthenticationSecret: 'xpto-1',
-      isTwoFactorAuthenticationEnabled: false,
+      twoFactorAuthenticationSecret: 'LQTTARBBMYKTSVYX',
+      isTwoFactorAuthenticationEnabled: true,
     },
     {
       userId: 2,
       email: 'maria@test.com',
       username: 'maria',
       password: 'guess',
-      twoFactorAuthenticationSecret: 'xpto-2',
+      twoFactorAuthenticationSecret: 'ENIG4IZ4F5IRYMSG',
       isTwoFactorAuthenticationEnabled: false,
     },
   ];
